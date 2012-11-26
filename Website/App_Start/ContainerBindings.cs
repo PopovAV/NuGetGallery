@@ -35,6 +35,10 @@ namespace NuGetGallery
 
             Bind<GallerySetting>().ToMethod(c => gallerySetting.Value);
 
+            Bind<Lucene.Net.Store.Directory>()
+                .ToMethod((_) => LuceneCommon.GetDirectory())
+                .InSingletonScope();
+
             Bind<ISearchService>()
                 .To<LuceneSearchService>()
                 .InRequestScope();
