@@ -5,7 +5,7 @@ using Moq;
 using NuGet;
 using Xunit;
 
-namespace NuGetGallery.Services
+namespace NuGetGallery
 {
     public class NuGetExeDownloaderServiceFacts
     {
